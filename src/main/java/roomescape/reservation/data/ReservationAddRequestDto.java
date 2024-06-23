@@ -27,13 +27,4 @@ public class ReservationAddRequestDto {
         this.timeId = timeId;
         this.themeId = themeId;
     }
-
-    public Reservation toEntity(){
-        return new Reservation(
-          this.name,
-          this.date,
-          new ReservationTime(this.timeId, ""),
-          new Theme(this.themeId, "", "", "")
-      );
-    }
 }
